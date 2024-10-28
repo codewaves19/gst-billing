@@ -54,8 +54,20 @@ class AppController extends Controller
         //dd($party);
 
         // select record by column/field
-        $party = Party::where('phone', '5456545645')->get();
-        dd($party);
+        //$party = Party::where('phone', '5456545645')->get();
+        //dd($party);
+
+        // update record
+        $id = 1;
+        $party = Party::find($id);
+        //$party->full_name = 'Manisha';
+        //$party->save();
+        //dd($party);
+
+        // delete record
+        $id = 1;
+        $party = Party::find($id);
+        $party->delete();
 
         return "Database operations";
 
